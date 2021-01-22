@@ -1,0 +1,7 @@
+---
+# handlers file for Webserver
+#
+- name: "Restart Services"
+  service:
+     name:  "{{ software_name }}"
+     state: restarted

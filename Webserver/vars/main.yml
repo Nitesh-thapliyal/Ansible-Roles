@@ -1,0 +1,4 @@
+---
+# vars file for Webserver
+#
+software_name: "httpd"

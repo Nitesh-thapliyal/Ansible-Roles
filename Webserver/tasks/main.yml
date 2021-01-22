@@ -1,0 +1,17 @@
+---
+# tasks file for Webserver
+#
+- name: "Installing Apache Software"
+  package:
+     name: "{{ software_name }}"
+
+- name: "Copying Webpage"
+  copy:
+     src: "/etc/ansible/roles/Webserver/files/task.php"
+     dest: "/var/www/html"
+  notify: "Restart Services"
+
+- name: "Starting Service"
+  service:
+     name: "{{ software_name }}"
+     state: started
